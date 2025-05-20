@@ -1,0 +1,1095 @@
+ <!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+
+
+
+<!-- Mirrored from earnwithabhijeet.site/OkWinHack/OkWinHack/Wingo.html by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 15 Feb 2025 05:04:18 GMT -->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sikkim Hack</title>
+
+    <link href="../../../external.html?link=https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+    <style>
+
+    /* General Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+/* Body Styling */
+
+body {
+
+    background: #f4f9ff; /* Soft light blue background */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-height: 100vh;
+
+    padding: 20px;
+
+    color: #1e3a8a; /* Deep blue text */
+
+}
+
+
+
+/* Container */
+
+.container {
+
+    width: 420px;
+
+    background: #ffffff; /* Clean white card */
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+
+/* Decorative Shapes */
+
+.container::before,
+
+.container::after {
+
+    content: '';
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.2;
+
+    filter: blur(60px);
+
+    z-index: -1;
+
+}
+
+
+
+.container::before {
+
+    width: 200px;
+
+    height: 200px;
+
+    background: #8ecae6;
+
+    top: -60px;
+
+    left: -60px;
+
+}
+
+
+
+.container::after {
+
+    width: 150px;
+
+    height: 150px;
+
+    background: #219ebc;
+
+    bottom: -50px;
+
+    right: -50px;
+
+}
+
+
+
+/* Header */
+
+.header {
+
+    font-size: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #3b82f6; /* Lighter blue for accents */
+
+}
+
+
+
+.online-users {
+
+    font-weight: bold;
+
+    color: #1e3a8a;
+
+}
+
+
+
+/* Logo and Title */
+
+.logo img {
+
+    width: 90px;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.title {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    margin-top: 10px;
+
+}
+
+
+
+/* Input Box */
+
+.box {
+
+    background: #f0f9ff; /* Very soft blue */
+
+    border: 2px solid #dbeafe;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    position: relative;
+
+    text-align: left;
+
+    color: #1e3a8a;
+
+}
+
+
+
+.box div {
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+    color: #2563eb;
+
+}
+
+
+
+.box input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: 2px solid #dbeafe;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1e3a8a;
+
+    transition: all 0.3s;
+
+}
+
+
+
+.box input:focus {
+
+    border-color: #60a5fa;
+
+    box-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+
+}
+
+
+
+/* Result */
+
+#result {
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+    font-size: 16px;
+
+}
+
+
+
+/* Buttons */
+
+button {
+
+    display: block;
+
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+
+    color: white;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    margin: 10px auto;
+
+    transition: all 0.3s;
+
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+
+    width: 90%;
+
+}
+
+
+
+button:hover {
+
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+
+    transform: scale(1.03);
+
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.5);
+
+}
+
+
+
+.register-btn {
+
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+
+}
+
+
+
+.register-btn:hover {
+
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+
+}
+
+
+
+/* Instruction Box */
+
+.instruction-box {
+
+    background: #f0f9ff;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin: 10px 0;
+
+    text-align: center;
+
+}
+
+
+
+/* Loading */
+
+.loading {
+
+    display: none;
+
+    color: #3b82f6;
+
+    font-weight: bold;
+
+    animation: pulse 1s infinite;
+
+}
+
+
+
+/* Dialog Box */
+
+.dialog-overlay {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+
+
+.dialog-box {
+
+    background: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    animation: bounce 1s ease-in-out;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    width: 80%;
+
+    max-width: 350px;
+
+    color: #1e3a8a;
+
+}
+
+
+
+.dialog-box .close-btn {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    background: none; /* No background */
+
+    border: none; /* No border */
+
+    width: 20px; /* Minimal clickable area */
+
+    height: 20px; /* Minimal clickable area */
+
+    cursor: pointer; /* Pointer cursor on hover */
+
+    font-size: 0; /* Hides any text (like "X") */
+
+    line-height: 1; /* No extra spacing */
+
+    padding: 0; /* No padding */
+
+}
+
+
+
+.input-group {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+    color: #2563eb;
+
+}
+
+
+
+.input-group span {
+
+    margin-right: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+
+.input-group input {
+
+    flex-grow: 1;
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: 2px solid #dbeafe;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1e3a8a;
+
+    transition: all 0.3s;
+
+}
+
+.logo img {
+
+    width: 120px; /* Increased the size */
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+
+    pointer-events: none;
+
+    user-drag: none;
+
+    -webkit-user-drag: none;
+
+    animation: bounce 1.5s infinite alternate; /* Added up and down animation */
+
+}
+
+
+
+@keyframes bounce {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px); /* Move up */
+
+    }
+
+    100% {
+
+        transform: translateY(0); /* Back to original position */
+
+    }
+
+}
+
+
+
+
+
+/* Animations */
+
+@keyframes pulse {
+
+    0%, 100% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        opacity: 0.5;
+
+    }
+
+}
+
+
+
+@keyframes bounce {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+
+
+    </style>
+
+<style>
+
+/* General Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+body, html {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+}
+
+
+
+/* Body Styling */
+
+body {
+
+    background: #f4f9ff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 0;
+
+    color: #1e3a8a;
+
+}
+
+
+
+/* Container */
+
+.container {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow-x: hidden; /* Prevent horizontal scroll in container */
+
+    margin-bottom: 60px; /* To account for the fixed navigation bar */
+
+}
+
+
+
+/* Webview Section */
+
+.webview {
+
+    display: none;
+
+    width: 100%;
+
+    height: calc(100vh - 60px); /* Exclude the navigation height */
+
+    border-radius: 30px 30px 0 0;
+
+    overflow: hidden;
+
+}
+
+
+
+iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+
+/* Bottom Navigation */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+    border-radius: 15px 15px 0 0;
+
+    z-index: 1000;
+
+}
+
+
+
+.bottom-nav button {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding: 10px 0;
+
+    border: none;
+
+    background: none;
+
+    font-size: 16px;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+
+.bottom-nav button.active {
+
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+
+    color: white;
+
+    border-radius: 10px;
+
+    margin: 5px;
+
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="container" id="hack-content">
+
+    <div class="header">
+
+        <div class="accuracy-text" onclick="showAccuracyDialog()">Increase Accuracy?</div>
+
+        <span></span>
+
+        <span class="online-users">● Online Users: <span id="online-users"></span></span>
+
+    </div>
+
+    <div class="logo">
+
+       <img src="sikkim.png" alt="fir Logo" style="pointer-events: none; user-drag: none; -webkit-user-drag: none;" draggable="false" />
+
+    </div>
+
+    <div class="title">Sikkim (Hack)</div>
+
+        <div class="box">
+
+    <div>Server: <span style="color:#34a853;">Active</span> <img src="images.png" alt="Tick" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px; pointer-events: none; user-drag: none; -webkit-user-drag: none;" draggable="false" /></div>
+
+    <div class="input-group">
+
+        <span>Period:</span>
+
+        <input type="text" id="period-input" placeholder="Enter Period No." oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+
+    </div>
+
+    <div>Result: <span id="result">--</span></div>
+
+</div>
+
+
+
+    <button class="start-btn" onclick="playSound(); startProcess()">Start</button>
+
+    <div id="loading" class="loading">Loading...</div>
+
+    <div class="instruction-box">
+
+        Create a new Sikkim Game account by clicking on 'Register' button. If you use this mod in an old account, then mod will not work.
+
+       </div>
+
+       <div class="instruction-box">
+
+        'Register' बटन पर क्लिक करके एक नया account बनाएं। यदि आप इस मॉड का उपयोग पुराने account में करते हैं, तो हैक काम नहीं करेगा।
+
+    </div>
+
+    <button class="button register-btn" onclick="window.open('https://elite12345ywywywy.github.io/Sikkim/', '_blank')">Register</button>
+
+    <button class="button" onclick="window.open('https://t.me/team_hackersz', '_blank')">Join Telegram</button>
+    
+            <button class="button" onclick="window.open('https://t.me/Tradehelper1', '_blank')">Gift Codes</button>
+
+</div>
+
+
+
+<!-- Dialog Box -->
+
+<div class="dialog-overlay" id="dialog-overlay" onclick="closeDialog(event)">
+
+    <div class="dialog-box" onclick="event.stopPropagation()">
+
+        <button class="close-btn" onclick="closeDialog()">×</button>
+
+        <p>Please create a new Sikkim Game account by clicking on the "Register" button. Using this mod with an old account may result in loss</p>
+
+        <button class="button register-btn" onclick="closeDialog(); window.open('https://elite12345ywywywy.github.io/Sikkim/', '_blank')">Register</button>
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="dialog-overlay" id="accuracy-dialog" onclick="hideAccuracyDialog()">
+
+    <div class="dialog-box" onclick="event.stopPropagation()">
+
+     <p>To Increase Accuracy, Create a new Sikkim account by clicking on "Register" button below.<br></br>सटीकता बढ़ाने के लिए, नीचे "Register" बटन पर क्लिक करके एक नया account बनाएं।</p>
+
+        <button class="button register-btn" onclick="hideAccuracyDialog(); window.open('https://elite12345ywywywy.github.io/Sikkim/', '_blank')">Register</button>
+
+        </div>
+
+</div>
+
+<!-- Dialog Box -->
+
+<div class="dialog-overlay" id="dialog-overlay" onclick="closeDialog(event)">
+
+    <div class="dialog-box" onclick="event.stopPropagation()">
+
+        <p>Please create a new Sikkim Game account by clicking on the "Register" button. Using this mod with an old account may result in loss</p>
+
+        <button class="button register-btn" onclick="hideAccuracyDialog(); window.open('https://elite12345ywywywy.github.io/Sikkim/', '_blank')">Register</button>
+
+        
+
+        </div>
+
+</div>
+
+
+
+    <!-- Webview Section -->
+
+    <div class="webview" id="game-content">
+
+        <iframe src="https://elite12345ywywywy.github.io/Sikkim/"></iframe>
+
+    </div>
+
+
+
+    <!-- Bottom Navigation -->
+
+    <div class="bottom-nav">
+
+        <button id="hack-tab" class="active" onclick="showTab('hack')">Hack</button>
+
+        <button id="game-tab" onclick="showTab('game')">Game</button>
+
+    </div>
+
+
+
+
+
+<!-- Audio for Button Click -->
+
+<audio id="click-sound" src="sound.html" preload="auto"></audio>
+
+
+
+<script>
+
+    window.onload = function() {
+
+        showTab('hack');
+
+    };
+
+    function showTab(tab) {
+
+        document.getElementById('hack-content').style.display = tab === 'hack' ? 'block' : 'none';
+
+        document.getElementById('game-content').style.display = tab === 'game' ? 'block' : 'none';
+
+
+
+        document.getElementById('hack-tab').classList.toggle('active', tab === 'hack');
+
+        document.getElementById('game-tab').classList.toggle('active', tab === 'game');
+
+    }
+
+
+
+let storedResults = {}; // To store results for each period
+
+// Show the dialog on page load
+
+    document.getElementById('dialog-overlay').style.display = 'flex';
+
+
+
+    // Close the dialog
+
+    function closeDialog(event) {
+
+        document.getElementById('dialog-overlay').style.display = 'none';
+
+    }
+
+    // Show the dialog on page load
+
+    // document.getElementById('dialog-overlay').style.display = 'flex';  // This line is removed
+
+
+
+    // Close the dialog
+
+    function closeDialog(event) {
+
+        document.getElementById('dialog-overlay').style.display = 'none';
+
+    }
+
+
+
+    // Random User Count and Period Result Simulation
+
+    setInterval(() => {
+
+    document.getElementById('online-users').textContent = Math.floor(Math.random() * 5000) + 45000;
+
+}, 1000);
+
+
+
+
+
+    function startProcess() {
+
+        let periodInput = document.getElementById('period-input').value.trim();
+
+        let resultElement = document.getElementById('result');
+
+
+
+        if (!periodInput) {
+
+            resultElement.textContent = "Error ❌";
+
+            resultElement.style.color = "#d32f2f"; // Error color
+
+            return;
+
+        }
+
+
+
+        document.getElementById('loading').style.display = 'block';
+
+        setTimeout(() => {
+
+            // Check if a result is already stored for this period
+
+            if (!storedResults[periodInput]) {
+
+                // Generate a random number between 0 and 9
+
+                let number = Math.floor(Math.random() * 10);
+
+
+
+                // Determine size and color based on the generated number
+
+                let size = (number >= 0 && number <= 4) ? "SMALL" : "BIG";
+
+                let color = (number % 2 === 0) ? "🔴" : "🟢";
+
+
+
+                // Store the result for this period
+
+                storedResults[periodInput] = `${size} / ${color}`;
+
+            }
+
+
+
+            // Display the stored result
+
+            resultElement.textContent = `${storedResults[periodInput]}`;
+
+            resultElement.style.color = "#00796b"; // Success color
+
+            document.getElementById('loading').style.display = 'none';
+
+        }, 750);
+
+    }
+
+    function showAccuracyDialog() {
+
+        document.getElementById('accuracy-dialog').style.display = 'flex';
+
+    }
+
+
+
+    function hideAccuracyDialog() {
+
+        document.getElementById('accuracy-dialog').style.display = 'none';
+
+    }
+
+
+
+    // Play the sound when the button is clicked
+
+    function playSound() {
+
+        document.getElementById('click-sound').play();
+
+    }
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from earnwithabhijeet.site/OkWinHack/OkWinHack/Wingo.html by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 15 Feb 2025 05:04:53 GMT -->
+</html>

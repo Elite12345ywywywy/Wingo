@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from apksdownload.github.io/Expert-Predictor/ by HTTrack Website Copier/3.x [XR&CO'2017], Tue, 20 May 2025 15:25:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert APK | Premium Tool</title>
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00f7ff;
+            --secondary: #0084ff;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #ffffff;
+            --accent: #ff00aa;
+            --card-bg: rgba(15, 15, 35, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary), transparent);
+            opacity: 0.1;
+            animation: float 15s infinite linear;
+            filter: blur(40px);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(50vw, 50vh) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.2);
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 247, 255, 0.3);
+        }
+
+        /* Shimmer Effect */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 45%,
+                rgba(255, 255, 255, 0.05) 48%,
+                rgba(255, 255, 255, 0) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shimmer 5s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) rotate(30deg);
+            }
+            100% {
+                transform: translateX(100%) rotate(30deg);
+            }
+        }
+
+        /* Logo Style */
+        .apk-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .apk-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.8);
+        }
+
+        .apk-logo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 247, 255, 0.1) 0%,
+                rgba(0, 247, 255, 0) 50%,
+                rgba(0, 247, 255, 0.1) 100%
+            );
+            animation: logoGlow 3s infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        /* APK Name */
+        .apk-name {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .apk-name h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+            }
+        }
+
+        .apk-name p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about-apk {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(10, 20, 40, 0.4);
+            border-radius: 15px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.5s ease;
+        }
+
+        .about-apk:hover {
+            background: rgba(15, 30, 50, 0.6);
+            transform: translateX(5px);
+        }
+
+        .about-apk h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-apk p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Buttons Container */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            outline: none;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--darker);
+            box-shadow: 0 5px 15px rgba(0, 247, 255, 0.4);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 247, 255, 0.6);
+        }
+
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #00aced);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 172, 237, 0.4);
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 172, 237, 0.6);
+        }
+
+        /* Features List */
+        .features {
+            margin: 2rem 0;
+            list-style: none;
+        }
+
+        .features li {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .features li:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .features li i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .apk-name h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Particle Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 247, 255, 0.5);
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        /* Neon Border Animation */
+        .neon-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .neon-border::before, .neon-border::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 22px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+            background-size: 400%;
+            z-index: -2;
+            animation: borderGlow 8s linear infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .neon-border::after {
+            filter: blur(10px);
+        }
+
+        .card:hover .neon-border::before,
+        .card:hover .neon-border::after {
+            opacity: 1;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-circle" style="width: 600px; height: 600px; top: -300px; left: -300px; animation-delay: 0s;"></div>
+        <div class="bg-circle" style="width: 400px; height: 400px; bottom: -200px; right: -200px; animation-delay: 3s;"></div>
+        <div class="bg-circle" style="width: 500px; height: 500px; top: 50%; left: 20%; animation-delay: 6s;"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Card -->
+        <div class="card">
+            <div class="neon-border"></div>
+            
+            <!-- APK Logo -->
+            <img src="logo.png" alt="Expert APK Logo" class="apk-logo">
+            
+            <!-- APK Name -->
+            <div class="apk-name">
+                <h1>Wingo Hack</h1>
+                <p>Earn Money Daily ! 💯 </p>
+            </div>
+            
+            <!-- About APK -->
+            <div class="about-apk">
+                <h2><i class="fas fa-info-circle"></i> About This App</h2>
+                <p>Wingo Hack APK is a cutting-edge professional tool designed to enhance your productivity and workflow. With advanced features and a sleek interface, it's the ultimate solution for experts in their field.</p>
+            </div>
+            
+            <!-- Features -->
+            <ul class="features">
+                <li><i class="fas fa-check-circle"></i> Premium Features Unlocked</li>
+                <li><i class="fas fa-bolt"></i> Lightning Fast Performance</li>
+                <li><i class="fas fa-shield-alt"></i> Enhanced Security</li>
+                <li><i class="fas fa-sync-alt"></i> Regular Updates</li>
+            </ul>
+            
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="btn btn-download" id="downloadBtn">
+                    <i class="fas fa-download"></i> Start Hack
+                </button>
+                <a href="https://t.me/team_hackersz" target="_blank" class="btn btn-telegram">
+                    <i class="fab fa-telegram"></i> Join Telegram
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Wingo APK. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Create particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 1px and 3px
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.bottom = `-10px`;
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Background circles animation
+        function animateCircles() {
+            const circles = document.querySelectorAll('.bg-circle');
+            circles.forEach((circle, index) => {
+                // Randomize animation duration
+                const duration = 30 + (index * 5);
+                circle.style.animationDuration = `${duration}s`;
+            });
+        }
+        
+        // Download button functionality
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Create shimmer effect on click
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 1000);
+            
+            // Simulate download
+            const link = document.createElement('a');
+            link.href = 'menu.html';
+            link.download = 'Expert Predictor.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Show download started message
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening.....';
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+            }, 3000);
+        });
+        
+        // Initialize animations
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            animateCircles();
+            
+            // Add hover effect to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+<!-- Mirrored from apksdownload.github.io/Expert-Predictor/ by HTTrack Website Copier/3.x [XR&CO'2017], Tue, 20 May 2025 15:25:30 GMT -->
+</html>
