@@ -1,152 +1,345 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Wingo Hack</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
+<!DOCTYPE html><html lang="en"><!-- Mirrored from ravanop97088.github.io/91club/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 05 Dec 2024 09:09:28 GMT --><!-- Added by HTTrack -->
+<!-- Mirrored from mdxmods-dev.github.io/Mdxbot/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 08 Dec 2024 04:45:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><!-- /Added by HTTrack -->
 
-    .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      animation: jump 1.5s infinite;
-      margin: 20px auto;
-      display: block;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51 Game HACK</title>
+    <link href="../../external.html?link=https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    h1 {
-      color: #9f5afd;
-      font-size: 24px;
-      margin: 10px 0;
-    }
+        /* Body Styling */
+        body {
+            background: radial-gradient(circle at center, #0f0f0f, #020202);
+            color: #33ff33;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden; /* Prevent scrolling when popup is visible */
+        }
 
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      animation: marquee 12s linear infinite;
-      font-size: 14px;
-      margin: 10px 20px;
-      background: linear-gradient(to right, #00ffe7, #ff00c8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+        /* Disable clicks and blur background when popup is visible */
+        .blurred {
+            pointer-events: none;
+            filter: blur(5px);
+        }
 
-    .game-box {
-      border: 2px solid #00ff00;
-      border-radius: 15px;
-      padding: 8px;
-      margin: 12px auto;
-      width: 120px;
-    }
+        /* Container Styling */
+        .container {
+            width: 360px;
+            background: linear-gradient(to bottom right, #0a0a0a, #1c1c1c);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 30px rgba(0, 255, 0, 0.5);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 2px solid #33ff33;
+        }
 
-    .game-box img {
-      width: 100%;
-      border-radius: 10px;
-      animation: shimmer 2s infinite linear;
-      cursor: pointer;
-    }
+        /* Safe Tag */
+        .safe-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(45deg, #33ff33, #009900);
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.7);
+            z-index: 10;
+        }
 
-    .game-box p {
-      margin: 6px 0 0;
-      font-size: 14px;
-      background: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmerText 2s infinite linear;
-    }
+        /* Header Section */
+        .header {
+            font-size: 15px;
+            color: #33ff33;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .button {
-      border: 2px solid #00ff00;
-      border-radius: 25px;
-      padding: 12px 0;
-      margin: 10px auto;
-      display: block;
-      width: 85%;
-      max-width: 250px;
-      font-size: 18px;
-      background: linear-gradient(90deg, #00ffe7, #ff00c8, #00ffe7);
-      background-size: 200% auto;
-      color: #fff;
-      text-decoration: none;
-      animation: shimmerText 2s infinite linear;
-    }
+        .online-users {
+            color: #33ff33;
+            font-weight: bold;
+        }
 
-    /* Shimmer animations */
-    @keyframes shimmer {
-      0% { filter: brightness(1); }
-      50% { filter: brightness(1.3); }
-      100% { filter: brightness(1); }
-    }
+        /* User Info */
+        .user-info {
+            font-size: 14px;
+            color: #33ff33;
+        }
 
-    @keyframes shimmerText {
-      0% { background-position: 0% center; }
-      100% { background-position: 200% center; }
-    }
+        /* Logo and Title */
+        .logo img {
+            max-width: 120px;
+            margin: 0 auto;
+            display: block;
+        }
+        .title {
+            font-size: 18px;
+            color: #33ff33;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 0 0 10px #33ff33;
+        }
 
-    /* Marquee animation */
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+        /* Instruction Boxes */
+        .instruction-box {
+            font-size: 14px;
+            color: #33ff33;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #33ff33;
+            text-shadow: 0 0 5px #33ff33;
+            font-weight: bold;
+        }
 
-    /* Jumping logo animation */
-    @keyframes jump {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-  </style>
+        /* Buttons */
+        .button {
+            background: linear-gradient(45deg, #33ff33, #009900);
+            color: #000;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            text-shadow: 0 0 5px #33ff33;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #33ff33;
+        }
+
+        /* Unique Button for Register */
+        .register-btn {
+            background: linear-gradient(45deg, #ff3333, #cc0000);
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #ff3333;
+        }
+        .register-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff3333;
+        }
+
+        /* Period and Timer Section */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            color: #33ff33;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid #33ff33;
+            box-shadow: 0 0 20px #33ff33;
+        }
+
+        .info-section div {
+            font-size: 16px;
+        }
+
+        /* Pop-up Center */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+            color: white;
+            text-align: center;
+            z-index: 20;
+            width: 80%;
+            max-width: 400px;
+        }
+        #popup span {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: #33ff33;
+            cursor: pointer;
+        }
+
+        /* Close Button */
+        #popup span:hover {
+            color: #ff3333;
+        }
+    </style>
 </head>
 <body>
+<div class="safe-tag">100% Safe</div>
 
-  <!-- Logo with jumping effect -->
-  <img src="logo.png" alt="Logo" class="logo">
+<div id="main-content" class="container blurred">
+    <!-- Header -->
+    <div class="header">
+        <span></span>
+        <span class="online-users" id="online-users"></span>
+    </div>
 
-  <h1>Wingo Hack</h1>
+    <!-- User Info -->
+    <div class="user-info" id="user-winning"></div>
 
-  <div class="marquee">Welcome to Wingo Hack || Earn Money Daily</div>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="gamefiftyone.png" alt="51 game Logo">
+    </div>
+    <div class="title">51 Game (hack)</div>
 
-  <div class="game-box">
-    <a href="jalwa.html">
-      <img src="jalwa.png" alt="Jalwa">
-    </a>
-    <p>Jalwa (Hack)</p>
-  </div>
+    <!-- Period and Timer Section -->
+    <div class="info-section">
+        <div id="wingo">Wingo: 1min</div>
+        <div id="period1m">Period: 20241207100010281</div>
+        <div id="timer1m">Remaining Time: 00 : 14</div>
+        <div id="result">Result: Awaiting...</div>
+    </div>
 
-  <div class="game-box">
-    <a href="tashan.html">
-      <img src="tashan.png" alt="Tashan">
-    </a>
-    <p>Tashan (Hack)</p>
-  </div>
+    <!-- Instructions -->
+    <div class="instruction-box">
+        Create a new 51 Game account by clicking on 'Register' button. If you use this mod in an old account, then mod will not work.
+    </div>
+    <div class="instruction-box">
+        'Register' बटन पर क्लिक करके एक नया account बनाएं। यदि आप इस मॉड का उपयोग पुराने account में करते हैं, तो हैक काम नहीं करेगा।
+    </div>
 
-  <div class="game-box">
-    <a href="okwin.html">
-      <img src="okwin.png" alt="Okwin">
-    </a>
-    <p>Okwin (Hack)</p>
-  </div>
+    <!-- Buttons -->
+    <button class="button register-btn" onclick="window.open('https://51game.app/#/register?invitationCode=83525201598', '_blank')">Register</button>
+    <button class="button" onclick="window.open('https://t.me/colourpredictionhackapk', '_blank')">Join Telegram</button>
+    <button class="button" onclick="window.open('https://t.me/Giftcodebonus', '_blank')">Gift Codes</button>
+</div>
 
-  <div class="game-box">
-    <a href="sikkim.html">
-      <img src="sikkim.png" alt="Sikkim">
-    </a>
-    <p>Sikkim (Hack)</p>
-  </div>
+<!-- Pop-up -->
+<div id="popup" style="display: block;">
+    <div>
+        <p>Please create a new 51 Game account by clicking on the "Register" button. Using this mod with an old account may result in loss.</p>
+        <button class="button register-btn" onclick="openRegisterLink()">Register</button>
+    </div>
+    <span onclick="closePopup()">X</span>
+</div>
 
-  <a href="https://t.me/team_hackersz" class="button">Join Telegram</a>
-  <a href="https://t.me/Tradehelper1" class="button">Codes Channel</a>
-  <a href="https://t.me/teamhackersz_bot" class="button">Customer Care</a>
+<script>
+    // Show the pop-up when the page loads
+    window.onload = function() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('main-content').classList.add('blurred');
+    };
 
-</body>
+    // Close pop-up function
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('main-content').classList.remove('blurred');
+    }
+
+    // Open register link and close the popup
+    function openRegisterLink() {
+        window.open('https://51game.app/#/register?invitationCode=83525201598', '_blank');
+        closePopup();
+    }
+
+    // Generate random online users count
+    function generateOnlineUsers() {
+        const min = 9000;
+        const max = 15000;
+        const randomUsers = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.getElementById('online-users').textContent = `Online Users: ${randomUsers}`;
+    }
+
+    // Generate random user winning amount
+    function generateUserWinning() {
+        const min = 9000;
+        const max = 50000;
+        const randomAmount = Math.floor(Math.random() * (max - min + 1)) + min;
+        const randomUser = `789${Math.floor(1000 + Math.random() * 9000)}990`; // Create random user number
+
+        document.getElementById('user-winning').textContent = `User ${randomUser.slice(0, 3)}****${randomUser.slice(-3)} Win ₹${randomAmount}`;
+    }
+
+    // Random results
+    const results = [
+        "0 (Small) Violet", "1 (Small) Green", "2 (Small) Red", "3 (Small) Green", "4 (Small) Red", 
+        "5 (Big) Violet", "6 (Big) Red", "7 (Big) Green", "8 (Big) Red", "9 (Big) Green"
+    ];
+
+    // Function to select a random result
+    function pickRandomResult() {
+        const currentMinute = new Date().getMinutes();
+        const randomIndex = currentMinute % 10;
+        const selectedResult = results[randomIndex];
+        document.getElementById('result').textContent = `Result: ${selectedResult}`;
+    }
+
+    // Function to update period and timer
+    function updateTimer() {
+        const now = new Date();
+
+        // Convert to UTC
+        const utcHours = now.getUTCHours();
+        const utcMinutes = now.getUTCMinutes();
+        const utcSeconds = now.getUTCSeconds();
+
+        const remainingSeconds = 60 - utcSeconds;
+        const totalMinutes = utcHours * 60 + utcMinutes;
+
+        // Update period number
+        const periodElement = document.getElementById('period1m');
+        const dateStr = now.toISOString().slice(0, 10).replace(/-/g, '');
+        const period = `${dateStr}1000${10001 + totalMinutes}`;
+        periodElement.textContent = `Period: ${period}`;
+
+        // Update timer in format "00 : xx"
+        const timerElement = document.getElementById('timer1m');
+        const formattedTime = `00 : ${remainingSeconds.toString().padStart(2, '0')}`;
+        timerElement.textContent = `Remaining Time: ${formattedTime}`;
+    }
+
+    // Start the timer and result functions
+    setInterval(updateTimer, 1000);
+    updateTimer(); // Run immediately on load
+
+    // Display result periodically
+    setInterval(pickRandomResult, 1000);
+
+    // Update online users and winning user every 1500ms
+    setInterval(() => {
+        generateOnlineUsers();
+        generateUserWinning();
+    }, 1500);
+</script>
+
+
+
+
+
+</body><!-- Mirrored from ravanop97088.github.io/91club/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 05 Dec 2024 09:09:29 GMT -->
+<!-- Mirrored from mdxmods-dev.github.io/Mdxbot/ by HTTrack Website Copier/3.x [XR&CO'2017], Sun, 08 Dec 2024 04:45:12 GMT -->
 </html>
