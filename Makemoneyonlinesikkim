@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- Mirrored from earnwithhack.site/Okwin/Games/Wingo/ by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 14 Feb 2025 14:59:42 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikkim Hack</title>
+    <link href="../../../../external.html?link=https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>
+    /* Dialog Box */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .dialog-box {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            animation: bounce 1s ease-in-out;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 350px; /* Adjust width to fit the screen */
+        }
+
+        .dialog-box .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #ff6f61;
+            cursor: pointer;
+        }
+
+        .dialog-box p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .dialog-box register-btn {
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dialog-box register-btn:hover {
+            background: linear-gradient(45deg, #66bb6a, #388e3c);
+            transform: scale(1.1) rotate(2deg);
+        }
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            width: 420px;
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Decorative Shapes */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .container::before {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ff6f61, #ffcc80);
+            top: -60px;
+            left: -60px;
+        }
+
+        .container::after {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #81d4fa, #64b5f6);
+            bottom: -50px;
+            right: -50px;
+        }
+
+        /* Header */
+        .header {
+            font-size: 14px;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .online-users {
+            font-weight: bold;
+            color: #34a853;
+        }
+
+        /* Logo and Title */
+        .logo {
+            margin: 20px 0;
+        }
+
+        .logo img {
+            width: 120px;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            text-shadow: 2px 2px #ff6f61;
+        }
+
+        /* Input Box */
+        .box {
+            background: #fef9e7;
+            border: 2px dashed #ffd54f;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+            text-align: left;
+        }
+
+        .box::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffab91, #ffccbc);
+            top: -20px;
+            right: -20px;
+            z-index: -1;
+        }
+
+        .box div {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group span {
+            font-size: 16px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .box input {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ffd54f;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+            width: 100%; /* Make sure it fits the box */
+        }
+
+        .box input:focus {
+            border-color: #ff6f61;
+            background: #fff8e1;
+        }
+
+        #result {
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        /* Buttons */
+        .start-btn, .button {
+            display: block;
+            background: linear-gradient(45deg, #ff6f61, #ffab91);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px auto;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;  /* Make all buttons same width */
+        }
+
+        .start-btn:hover, .button:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .register-btn {
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .register-btn:hover {
+            background: linear-gradient(45deg, #66bb6a, #388e3c);
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            color: #ff6f61;
+            font-weight: bold;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        /* Instruction */
+        .instruction-box {
+            background: #fff8e1;
+            padding: 15px;
+            border-radius: 10px;
+            color: #ff9800;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        /* Dialog Box */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .dialog-box {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            animation: bounce 1s ease-in-out;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 350px; /* Adjust width to fit the screen */
+        }
+
+        .dialog-box .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #ff6f61;
+            cursor: pointer;
+        }
+
+        .dialog-box p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .dialog-box register-btn {
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dialog-box register-btn:hover {
+            background: linear-gradient(45deg, #66bb6a, #388e3c);
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        .accuracy-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ff6f61;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: 2px solid #ff6f61;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: white;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .accuracy-text:hover {
+            background: #ffe5e0;
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="accuracy-text" onclick="showAccuracyDialog()">Increase Accuracy?</div>
+        <span></span>
+        <span class="online-users">● Online Users: <span id="online-users"></span></span>
+    </div>
+    <div class="logo">
+       <img src="jalwa.png" alt="fir Logo" style="pointer-events: none; user-drag: none; -webkit-user-drag: none;" draggable="false" />
+    </div>
+    <div class="title">Sikkim (Hack)</div>
+        <div class="box">
+    <div>Server: <span style="color:#34a853;">Active</span> <img src="../../../../bottlinkkses.github.io/BOOT/91club/tick.gif" alt="Tick" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px; pointer-events: none; user-drag: none; -webkit-user-drag: none;" draggable="false" /></div>
+    <div class="input-group">
+        <span>Period:</span>
+        <input type="text" id="period-input" placeholder="Enter Period No." oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+    </div>
+    <div>Result: <span id="result">--</span></div>
+</div>
+
+    <button class="start-btn" onclick="playSound(); startProcess()">Start</button>
+    <div id="loading" class="loading">Loading...</div>
+    <div class="instruction-box">
+        Create a new Sikkim account by clicking on 'Register' button. If you use this mod in an old account, then mod will not work.
+       </div>
+       <div class="instruction-box">
+        'Register' बटन पर क्लिक करके एक नया account बनाएं। यदि आप इस मॉड का उपयोग पुराने account में करते हैं, तो हैक काम नहीं करेगा।
+    </div>
+    <button class="button register-btn" onclick="window.open('https://www.jalwa.club/#/register?invitationCode=848581365001)">Register</button>
+    <button class="button" onclick="window.open('https://t.me/colourpredictionhackapk')">Join Telegram</button>
+</div>
+
+<!-- Dialog Box -->
+<div class="dialog-overlay" id="dialog-overlay" onclick="closeDialog(event)">
+    <div class="dialog-box" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeDialog()">×</button>
+        <p>Please create a new Sikkim account by clicking on the "Register" button. Using this mod with an old account may result in loss</p>
+        <button class="button register-btn" onclick="window.open('https://www.jalwa.club/#/register?invitationCode=848581365001)">Register</button>
+    </div>
+</div>
+
+<div class="dialog-overlay" id="accuracy-dialog" onclick="hideAccuracyDialog()">
+    <div class="dialog-box" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="hideAccuracyDialog()">×</button>
+        <p>Create a new Okwin account by the official hack link to increase accuracy. Click on the Register button below. <br></br>ᴬᶠᵗᵉʳ ᶜʳᵉᵃᵗⁱⁿᵍ ᵃ ⁿᵉʷ ᵃᶜᶜᵒᵘⁿᵗ ᵗʰᵉ ᵃᶜᶜᵘʳᵃᶜʸ ʷⁱˡˡ ⁱⁿᶜʳᵉᵃˢᵉ ᵃᵘᵗᵒᵐᵃᵗⁱᶜᵃˡˡʸ</p>
+        <button class="button register-btn" onclick="window.open('https://www.jalwa.club/#/register?invitationCode=848581365001', '_blank')">Register</button>
+    </div>
+</div>
+<!-- Dialog Box -->
+<div class="dialog-overlay" id="dialog-overlay" onclick="closeDialog(event)">
+    <div class="dialog-box" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeDialog()">×</button>
+        <p>Please create a new Okwin account by clicking on the "Register" button. Using this mod with an old account may result in loss</p>
+        <button class="button register-btn" onclick="window.open('https://www.jalwa.club/#/register?invitationCode=848581365001', '_blank')">Register</button>
+    </div>
+</div>
+
+
+<!-- Audio for Button Click -->
+<audio id="click-sound" src="sound.html" preload="auto"></audio>
+
+<script>
+let storedResults = {}; // To store results for each period
+// Show the dialog on page load
+    document.getElementById('dialog-overlay').style.display = 'flex';
+
+    // Close the dialog
+    function closeDialog(event) {
+        document.getElementById('dialog-overlay').style.display = 'none';
+    }
+    // Show the dialog on page load
+    // document.getElementById('dialog-overlay').style.display = 'flex';  // This line is removed
+
+    // Close the dialog
+    function closeDialog(event) {
+        document.getElementById('dialog-overlay').style.display = 'none';
+    }
+
+    // Random User Count and Period Result Simulation
+    setInterval(() => {
+    document.getElementById('online-users').textContent = Math.floor(Math.random() * 5000) + 45000;
+}, 1000);
+
+
+    function startProcess() {
+        let periodInput = document.getElementById('period-input').value.trim();
+        let resultElement = document.getElementById('result');
+
+        if (!periodInput) {
+            resultElement.textContent = "Error ❌";
+            resultElement.style.color = "#d32f2f"; // Error color
+            return;
+        }
+
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(() => {
+            // Check if a result is already stored for this period
+            if (!storedResults[periodInput]) {
+                // Generate a random number between 0 and 9
+                let number = Math.floor(Math.random() * 10);
+
+                // Determine size and color based on the generated number
+                let size = (number >= 0 && number <= 4) ? "SMALL" : "BIG";
+                let color = (number % 2 === 0) ? "🔴" : "🟢";
+
+                // Store the result for this period
+                storedResults[periodInput] = `${number} | ${size} | ${color}`;
+            }
+
+            // Display the stored result
+            resultElement.textContent = `${storedResults[periodInput]}`;
+            resultElement.style.color = "#00796b"; // Success color
+            document.getElementById('loading').style.display = 'none';
+        }, 750);
+    }
+    function showAccuracyDialog() {
+        document.getElementById('accuracy-dialog').style.display = 'flex';
+    }
+
+    function hideAccuracyDialog() {
+        document.getElementById('accuracy-dialog').style.display = 'none';
+    }
+
+    // Play the sound when the button is clicked
+    function playSound() {
+        document.getElementById('click-sound').play();
+    }
+</script>
+</body>
+
+<!-- Mirrored from earnwithhack.site/Okwin/Games/Wingo/ by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 14 Feb 2025 15:01:42 GMT -->
+  </html>
+  
